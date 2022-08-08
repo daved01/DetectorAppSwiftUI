@@ -67,7 +67,6 @@ class ViewController: UIViewController {
             self.permissionGranted = granted
             self.sessionQueue.resume()
         }
-        print("Permission requested")
     }
     
     func setupCaptureSession() {
