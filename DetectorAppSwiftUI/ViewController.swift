@@ -12,7 +12,9 @@ class ViewController: UIViewController {
       
     override func viewDidLoad() {
         checkPermission()
+        
         sessionQueue.async { [unowned self] in
+            guard permissionGranted else { return }
             self.setupCaptureSession()
             self.captureSession.startRunning()
         }
@@ -60,9 +62,12 @@ class ViewController: UIViewController {
     }
     
     func requestPermission() {
+        sessionQueue.suspend()
         AVCaptureDevice.requestAccess(for: .video) { [unowned self] granted in
             self.permissionGranted = granted
+            self.sessionQueue.resume()
         }
+        print("Permission requested")
     }
     
     func setupCaptureSession() {
