@@ -11,14 +11,16 @@
 		6302C29E289FBCAC00D61B61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302C29D289FBCAC00D61B61 /* ContentView.swift */; };
 		6302C2A0289FBCAD00D61B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6302C29F289FBCAD00D61B61 /* Assets.xcassets */; };
 		6302C2A3289FBCAD00D61B61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6302C2A2289FBCAD00D61B61 /* Preview Assets.xcassets */; };
+		6302C2AA289FBF5F00D61B61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302C2A9289FBF5F00D61B61 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6302C298289FBCAC00D61B61 /* ObjectDetectorSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectDetectorSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6302C298289FBCAC00D61B61 /* DetectorAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectorAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6302C29B289FBCAC00D61B61 /* ObjectDetectorSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectorSwiftUIApp.swift; sourceTree = "<group>"; };
 		6302C29D289FBCAC00D61B61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6302C29F289FBCAD00D61B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6302C2A2289FBCAD00D61B61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6302C2A9289FBF5F00D61B61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +37,7 @@
 		6302C28F289FBCAC00D61B61 = {
 			isa = PBXGroup;
 			children = (
-				6302C29A289FBCAC00D61B61 /* ObjectDetectorSwiftUI */,
+				6302C29A289FBCAC00D61B61 /* DetectorAppSwiftUI */,
 				6302C299289FBCAC00D61B61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +45,21 @@
 		6302C299289FBCAC00D61B61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6302C298289FBCAC00D61B61 /* ObjectDetectorSwiftUI.app */,
+				6302C298289FBCAC00D61B61 /* DetectorAppSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6302C29A289FBCAC00D61B61 /* ObjectDetectorSwiftUI */ = {
+		6302C29A289FBCAC00D61B61 /* DetectorAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				6302C29B289FBCAC00D61B61 /* ObjectDetectorSwiftUIApp.swift */,
 				6302C29D289FBCAC00D61B61 /* ContentView.swift */,
+				6302C2A9289FBF5F00D61B61 /* ViewController.swift */,
 				6302C29F289FBCAD00D61B61 /* Assets.xcassets */,
 				6302C2A1289FBCAD00D61B61 /* Preview Content */,
 			);
-			path = ObjectDetectorSwiftUI;
+			path = DetectorAppSwiftUI;
 			sourceTree = "<group>";
 		};
 		6302C2A1289FBCAD00D61B61 /* Preview Content */ = {
@@ -70,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6302C297289FBCAC00D61B61 /* ObjectDetectorSwiftUI */ = {
+		6302C297289FBCAC00D61B61 /* DetectorAppSwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6302C2A6289FBCAD00D61B61 /* Build configuration list for PBXNativeTarget "ObjectDetectorSwiftUI" */;
+			buildConfigurationList = 6302C2A6289FBCAD00D61B61 /* Build configuration list for PBXNativeTarget "DetectorAppSwiftUI" */;
 			buildPhases = (
 				6302C294289FBCAC00D61B61 /* Sources */,
 				6302C295289FBCAC00D61B61 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = ObjectDetectorSwiftUI;
+			name = DetectorAppSwiftUI;
 			productName = ObjectDetectorSwiftUI;
-			productReference = 6302C298289FBCAC00D61B61 /* ObjectDetectorSwiftUI.app */;
+			productReference = 6302C298289FBCAC00D61B61 /* DetectorAppSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6302C293289FBCAC00D61B61 /* Build configuration list for PBXProject "ObjectDetectorSwiftUI" */;
+			buildConfigurationList = 6302C293289FBCAC00D61B61 /* Build configuration list for PBXProject "DetectorAppSwiftUI" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6302C297289FBCAC00D61B61 /* ObjectDetectorSwiftUI */,
+				6302C297289FBCAC00D61B61 /* DetectorAppSwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6302C2AA289FBF5F00D61B61 /* ViewController.swift in Sources */,
 				6302C29E289FBCAC00D61B61 /* ContentView.swift in Sources */,
 				6302C29C289FBCAC00D61B61 /* ObjectDetectorSwiftUIApp.swift in Sources */,
 			);
@@ -266,10 +270,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ObjectDetectorSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DetectorAppSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 8N9383UWC5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App uses camera to detect objects.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -281,7 +286,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ObjectDetectorSwiftUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DetectorAppSwiftUI;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,10 +300,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ObjectDetectorSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DetectorAppSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 8N9383UWC5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App uses camera to detect objects.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,7 +316,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ObjectDetectorSwiftUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DetectorAppSwiftUI;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +326,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6302C293289FBCAC00D61B61 /* Build configuration list for PBXProject "ObjectDetectorSwiftUI" */ = {
+		6302C293289FBCAC00D61B61 /* Build configuration list for PBXProject "DetectorAppSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6302C2A4289FBCAD00D61B61 /* Debug */,
@@ -329,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6302C2A6289FBCAD00D61B61 /* Build configuration list for PBXNativeTarget "ObjectDetectorSwiftUI" */ = {
+		6302C2A6289FBCAD00D61B61 /* Build configuration list for PBXNativeTarget "DetectorAppSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6302C2A7289FBCAD00D61B61 /* Debug */,
