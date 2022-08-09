@@ -4,8 +4,8 @@ import AVFoundation
 
 
 class ViewController: UIViewController {
+    private var permissionGranted = false // Flag for permission
     private let captureSession = AVCaptureSession()
-    private var permissionGranted = false //Flag for permission
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     private var previewLayer = AVCaptureVideoPreviewLayer()
     var screenRect: CGRect! = nil // For view dimensions
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill // Fill screen
         previewLayer.connection?.videoOrientation = .portrait
         
-        // Updates to UI must be on main queu
+        // Updates to UI must be on main queue
         DispatchQueue.main.async { [weak self] in
             self!.view.layer.addSublayer(self!.previewLayer)
         }
