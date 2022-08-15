@@ -3,7 +3,7 @@ Code for the two tutorials on how to make an object detection app with a SwiftUI
 Both tutorials exist as posts and videos.
 
 ## Part 1 
-PreviewLayer which presents a live camera feed. [Post](https://www.neuralception.com/detection-app-tutorial-camera-feed/) | [video]().
+PreviewLayer which presents a live camera feed. [Post](https://www.neuralception.com/detection-app-tutorial-camera-feed/) | [video](https://www.youtube.com/watch?v=R2STbo53_vc).
 The code is in the tag `previewLayer`.
 
 ## Part 2
