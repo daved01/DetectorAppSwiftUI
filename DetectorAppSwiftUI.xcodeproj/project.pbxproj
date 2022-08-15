@@ -12,6 +12,8 @@
 		6302C2A0289FBCAD00D61B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6302C29F289FBCAD00D61B61 /* Assets.xcassets */; };
 		6302C2A3289FBCAD00D61B61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6302C2A2289FBCAD00D61B61 /* Preview Assets.xcassets */; };
 		6302C2AA289FBF5F00D61B61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302C2A9289FBF5F00D61B61 /* ViewController.swift */; };
+		63E9CD6728AACF1D00FD0BAA /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9CD6628AACF1D00FD0BAA /* Detector.swift */; };
+		63E9CD6928AACFB000FD0BAA /* YOLOv3TinyInt8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 63E9CD6828AACFB000FD0BAA /* YOLOv3TinyInt8LUT.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		6302C29F289FBCAD00D61B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6302C2A2289FBCAD00D61B61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6302C2A9289FBF5F00D61B61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63E9CD6628AACF1D00FD0BAA /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		63E9CD6828AACFB000FD0BAA /* YOLOv3TinyInt8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3TinyInt8LUT.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				6302C29B289FBCAC00D61B61 /* ObjectDetectorSwiftUIApp.swift */,
 				6302C29D289FBCAC00D61B61 /* ContentView.swift */,
 				6302C2A9289FBF5F00D61B61 /* ViewController.swift */,
+				63E9CD6628AACF1D00FD0BAA /* Detector.swift */,
+				63E9CD6828AACFB000FD0BAA /* YOLOv3TinyInt8LUT.mlmodel */,
 				6302C29F289FBCAD00D61B61 /* Assets.xcassets */,
 				6302C2A1289FBCAD00D61B61 /* Preview Content */,
 			);
@@ -141,8 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6302C2AA289FBF5F00D61B61 /* ViewController.swift in Sources */,
+				63E9CD6928AACFB000FD0BAA /* YOLOv3TinyInt8LUT.mlmodel in Sources */,
 				6302C29E289FBCAC00D61B61 /* ContentView.swift in Sources */,
 				6302C29C289FBCAC00D61B61 /* ObjectDetectorSwiftUIApp.swift in Sources */,
+				63E9CD6728AACF1D00FD0BAA /* Detector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

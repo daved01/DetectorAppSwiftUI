@@ -1,14 +1,21 @@
 import UIKit
 import SwiftUI
 import AVFoundation
+import Vision
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     private var permissionGranted = false // Flag for permission
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     private var previewLayer = AVCaptureVideoPreviewLayer()
     var screenRect: CGRect! = nil // For view dimensions
+    
+    // Detector
+    private var videoOutput = AVCaptureVideoDataOutput()
+    var requests = [VNRequest]()
+    var detectionLayer: CALayer! = nil
+    
       
     override func viewDidLoad() {
         checkPermission()
@@ -16,6 +23,10 @@ class ViewController: UIViewController {
         sessionQueue.async { [unowned self] in
             guard permissionGranted else { return }
             self.setupCaptureSession()
+            
+            self.setupLayers()
+            self.setupDetector()
+            
             self.captureSession.startRunning()
         }
     }
@@ -44,6 +55,9 @@ class ViewController: UIViewController {
             default:
                 break
             }
+        
+        // Detector
+        updateLayers()
     }
     
     func checkPermission() {
@@ -84,6 +98,12 @@ class ViewController: UIViewController {
         previewLayer.frame = CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill // Fill screen
         previewLayer.connection?.videoOrientation = .portrait
+        
+        // Detector
+        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sampleBufferQueue"))
+        captureSession.addOutput(videoOutput)
+        
+        videoOutput.connection(with: .video)?.videoOrientation = .portrait
         
         // Updates to UI must be on main queue
         DispatchQueue.main.async { [weak self] in
