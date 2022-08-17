@@ -7,7 +7,7 @@ PreviewLayer which presents a live camera feed. [Post](https://www.neuralception
 The code is in the tag `previewLayer`.
 
 ## Part 2
-Adding an object detection model. [Post](https://www.neuralception.com) | [video]().
+Adding an object detection model. [Post](https://www.neuralception.com/detection-app-tutorial-detector/) | [video]().
 The code is in the tag `detector`.
 
 # Accessing tags
