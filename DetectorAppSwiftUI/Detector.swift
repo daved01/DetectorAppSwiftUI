@@ -54,7 +54,7 @@ extension ViewController {
         let boxLayer = CALayer()
         boxLayer.frame = bounds
         boxLayer.borderWidth = 3.0
-        boxLayer.borderColor = CGColor.init(red: 7.0, green: 8.0, blue: 7.0, alpha: 1.0)
+        boxLayer.borderColor = CGColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         boxLayer.cornerRadius = 4
         return boxLayer
     }
