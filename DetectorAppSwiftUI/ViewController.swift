@@ -30,6 +30,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             self.captureSession.startRunning()
         }
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        // Reset layers when view reappears
+        self.setupLayers()
+    }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         screenRect = UIScreen.main.bounds
