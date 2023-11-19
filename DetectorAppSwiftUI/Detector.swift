@@ -1,9 +1,8 @@
-import Vision
 import AVFoundation
 import UIKit
+import Vision
 
 extension ViewController {
-    
     func setupDetector() {
         let modelURL = Bundle.main.url(forResource: "YOLOv3TinyInt8LUT", withExtension: "mlmodelc")
     
@@ -11,17 +10,17 @@ extension ViewController {
             let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL!))
             let recognitions = VNCoreMLRequest(model: visionModel, completionHandler: detectionDidComplete)
             self.requests = [recognitions]
-        } catch let error {
+        } catch {
             print(error)
         }
     }
     
     func detectionDidComplete(request: VNRequest, error: Error?) {
-        DispatchQueue.main.async(execute: {
+        DispatchQueue.main.async {
             if let results = request.results {
                 self.extractDetections(results)
             }
-        })
+        }
     }
     
     func extractDetections(_ results: [VNObservation]) {
@@ -43,7 +42,9 @@ extension ViewController {
     func setupLayers() {
         detectionLayer = CALayer()
         detectionLayer.frame = CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height)
-        self.view.layer.addSublayer(detectionLayer)
+        DispatchQueue.main.async { [weak self] in
+            self!.view.layer.addSublayer(self!.detectionLayer)
+        }
     }
     
     func updateLayers() {
@@ -54,7 +55,7 @@ extension ViewController {
         let boxLayer = CALayer()
         boxLayer.frame = bounds
         boxLayer.borderWidth = 3.0
-        boxLayer.borderColor = CGColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        boxLayer.borderColor = CGColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         boxLayer.cornerRadius = 4
         return boxLayer
     }
