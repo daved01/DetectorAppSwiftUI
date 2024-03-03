@@ -1,4 +1,6 @@
 # DetectorAppSwiftUI
+**Please note:** This repo is no longer actively maintained.
+
 Code for the two tutorials on how to make an object detection app with a SwiftUI-based interface.
 Both tutorials exist as posts and videos.
 
