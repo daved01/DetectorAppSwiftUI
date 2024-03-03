@@ -43,7 +43,9 @@ extension ViewController {
     func setupLayers() {
         detectionLayer = CALayer()
         detectionLayer.frame = CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height)
-        self.view.layer.addSublayer(detectionLayer)
+        DispatchQueue.main.async { [weak self] in 
+            self!.view.layer.addSublayer(self!.detectionLayer)
+        }
     }
     
     func updateLayers() {
